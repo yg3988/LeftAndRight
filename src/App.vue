@@ -14,11 +14,11 @@
             <AppRight></AppRight>
         </b-col>
     </b-row>
-    <b-row>
-        <b-col class = "leftFooter">
+    <b-row align-h="around">
+        <b-col cols="4" class = "leftFooter">
             <AppLeftFooter v-on:allocateAddress="allocateAddress"></AppLeftFooter>
         </b-col>
-        <b-col class ="rightFooter">
+        <b-col cols="4" class ="rightFooter">
             <AppRightFooter v-on:allocateAddress="allocateAddress"></AppRightFooter>
         </b-col>
     </b-row>
@@ -43,7 +43,7 @@
   import AppLeftFooter from './components/AppLeftFooter.vue'
   import AppRightFooter from './components/AppRightFooter.vue'
 
-  
+
   export default{
     data(){
       return {
@@ -53,13 +53,13 @@
     methods: {
       allocateAddress(receivedAddress){
         this.address=receivedAddress;
-        
+
         //만약 조중문 중 하나이면 오른쪽 화면을 업데이트, 아니면 왼쪽으로 업데이트
         if(
             this.address=="http://m.chosun.com"||
             this.address=="https://mnews.joins.com/"||
             this.address=="http://m.munhwa.com/"
-          ) 
+          )
         {
           document.getElementById("right").src = this.address;
         }
