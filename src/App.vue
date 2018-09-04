@@ -66,8 +66,8 @@
         else{
           document.getElementById("left").src = this.address;
         }
-
       }
+
     },
     components: {
       'AppHeader': AppHeader,
@@ -77,6 +77,7 @@
       'AppRightFooter': AppRightFooter
     }
   }
+  
 </script>
 
 <style>

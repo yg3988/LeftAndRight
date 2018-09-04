@@ -9,12 +9,29 @@
   	</div>
 </template>
 
-<script type="text/javascript">
-	export default{
 
+<script type="text/javascript">
+	import Vue from 'vue'
+	new Vue({
+		el: '#left',
+		beforeCreate : function(){
+			console.log("***************beforeCreate**************");
+		},
+		created: function(){
+			console.log("****************Created****************");
+		},
+		mounted : function(){
+			console.log(document.getElementById('left').src);
+		},
+		updated : function(){
+			console.log("******************updated*************");
+		}
+	})
+	export default{
 	}
+
 </script>
 
 <style type="text/css">
-	
+
 </style>
